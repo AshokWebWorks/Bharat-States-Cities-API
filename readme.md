@@ -36,7 +36,7 @@ Bharat States Cities API is a RESTful API that provides comprehensive informatio
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/bharat-states-cities-api.git
+   git clone https://github.com/AshokWebWorks/Bharat-States-Cities-API.git
    cd bharat-states-cities-api
    ```
 
