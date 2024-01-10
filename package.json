@@ -1,0 +1,38 @@
+{
+  "name": "bharatstatescitiesapi",
+  "version": "1.0.0",
+  "description": "\"BharatStatesCitiesAPI is a RESTful API that provides comprehensive information about states and cities in India. Easily access a curated list of Indian states and their respective cities, making it a valuable resource for applications requiring location-based data within the Indian subcontinent. Simplify your development process with BharatStatesCitiesAPI, designed to streamline geographical data retrieval and enhance location-based services.\"",
+  "keywords": [
+    "India",
+    "API",
+    "RESTful",
+    "geographical data",
+    "states",
+    "cities",
+    "location-based services",
+    "Bharat",
+    "Indian subcontinent",
+    "development",
+    "programming",
+    "web services"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ashokwebworks",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

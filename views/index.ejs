@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bharat States Cities API Documentation - RESTful API providing information about states and cities in India.">
+  <meta name="keywords" content="Bharat, States, Cities, API, Documentation, India, RESTful, Web Services">
+  <meta name="author" content="ashokwebworks">
+
+  <!-- Open Graph tags for better sharing on social media -->
+  <meta property="og:title" content="Bharat States Cities API Documentation">
+  <meta property="og:description" content="RESTful API providing information about states and cities in India.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:3000/v1/api">
+
+  <title>Bharat States Cities API Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border: 1px solid #ddd;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #007bff;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        overflow-x: auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bharat States Cities API Documentation</h1>
+
+  <p>Bharat States Cities API is a RESTful API that provides information about states and cities in India.</p>
+
+  <h2>Base URL</h2>
+
+  <pre>http://localhost:3000/v1/api</pre>
+
+  <h2>Authentication</h2>
+
+  <p>No authentication is required to access the API.</p>
+
+  <h2>Endpoints</h2>
+
+  <h3>Get All States</h3>
+
+  <strong>Endpoint:</strong>
+
+  <code>GET /states</code>
+
+  <strong>Parameters:</strong>
+
+  <ul>
+    <li><code>limit</code> (optional): Number of results per page (default: 36).</li>
+    <li><code>page</code> (optional): Page number for pagination (default: 1).</li>
+    <li><code>is_ut</code> (optional): Filter states by Union Territory (<code>true</code> or <code>false</code>).</li>
+  </ul>
+
+  <strong>Example:</strong>
+
+  <code>GET /states?limit=10&page=2&is_ut=true</code>
+
+  <!-- Repeat similar sections for other endpoints -->
+
+  <h2>Responses</h2>
+
+  <h3>Successful Response:</h3>
+
+  <pre>
+    {
+      "page": 1,
+      "success": true,
+      "message": "Data retrieved successfully",
+      "results": {
+        // Results specific to the endpoint
+      },
+      "total_pages": 5,
+      "total_results": 50
+    }
+  </pre>
+
+  <h3>Error Response:</h3>
+
+  <pre>
+    {
+      "success": false,
+      "message": "Error message",
+      "error": {
+        "code": 404,
+        "details": "Resource not found"
+      }
+    }
+  </pre>
+
+  <h2>Rate Limiting</h2>
+
+  <p>The API enforces rate limiting to prevent abuse. If the rate limit is exceeded, the API will respond with a 429 status code and an error message.</p>
+
+  <h2>License</h2>
+
+  <p>This API is licensed under the MIT License</p>
+
+</body>
+</html>
