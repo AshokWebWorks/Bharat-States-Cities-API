@@ -1,14 +1,15 @@
 const express = require("express");
+const path = require('path');
 const rateLimit = require('express-rate-limit');
 const router = require("./src/routes");
 const app = express();
 const port = 3000;
 
-app.set('view engine', 'ejs');
+
 
 app.use(express.json());
 // Set the view engine to EJS
-
+app.use(express.static(path.join(__dirname, 'public')));
 // Apply rate limiting middleware
 const limiter = rateLimit({
     windowMs: 1 * 60 * 1000, // 1 minute window
@@ -27,10 +28,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Route for the root endpoint
-app.get('/', (req, res) => {
-    res.render('index');
-  });
-
+app.get('/', async(req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 // Use the router for endpoints starting with "/v1/api"
 app.use("/v1/api", router);
 
